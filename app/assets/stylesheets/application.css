@@ -37,6 +37,9 @@ ul, ol {
   list-style: none;
 }
 
+a{
+  color: inherit;
+}
  /* リセット用CSSココマデ*/
 
  /*ヘッダ設定ココカラ*/
@@ -86,8 +89,20 @@ div {
 .button{
   color: #003763;
 }
- /*ヘッダ設定ココマデ*/
-
+/*ヘッダ設定ココマデ*/
+/*ページ共通設定ココカラ*/
+.container{
+  width:100%;
+  height: 100%;
+}
+.debug-info{
+  clear:both;
+  bottom: 0;
+}
+.main{
+  position: relative;
+}
+/*ページ共通設定ココマデ*/
 /*フッター設定ココカラ*/
 
 .footer{

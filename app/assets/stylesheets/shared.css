@@ -1,0 +1,78 @@
+.login_button{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #fffffd #e8e5db #e8e5db #fffffd;
+  border-radius:10px;
+  background-color: #fffcf2;
+  color: #003763;
+  font-family: 'OCRB';
+}
+
+.login_button:active{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #e8e5db #fffffd #fffffd #e8e5db;
+  border-radius:10px;
+  font-family: 'OCRB';
+}
+
+.form{
+  margin-bottom: 30px;
+}
+
+.login_submit{
+  margin-left: 75px;
+}
+
+.login_signnup{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 75px;
+}
+a.new_signnup{
+  width: 140px;
+  height: 39px;
+}
+
+.form-control{
+  background-color: #fffcf2;
+  border:3px solid;
+  border-color: #e8e5db #fffffd #fffffd #e8e5db;
+  border-radius:10px;
+  width:260px;
+}
+
+.login_signnup{
+  color: #fffcf2;
+}
+
+.login_signnup p{
+  height: 39px;
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #0060ad #001c33 #001c33 #0060ad;
+  background-color: #003763;
+  color: #fffcf2;
+  border-radius:10px;
+}
+
+.login_signnup p:active{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  background-color: #003763;
+  color: #fffcf2;
+  border:3px solid;
+  border-color: #001c33 #0060ad #0060ad #001c33;
+  border-radius:10px;
+}

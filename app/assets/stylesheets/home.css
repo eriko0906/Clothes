@@ -1,0 +1,18 @@
+.home{
+  margin-top: 100px;
+  width: 100%;
+  height: 550px;
+  display: flex;
+}
+.home_image{
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.home_menu_waku{
+  width: 50%;
+}
+.home_menu{
+  margin-top: 110px;
+  margin-left: 60px;
+}
