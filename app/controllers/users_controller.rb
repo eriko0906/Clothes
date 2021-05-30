@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  
+  before_action:logged_in_user, only:[:index, :edit, :update]
+  before_action:correct_user, only:[:edit, :update]
+  before_action:admin_user, only:[:destroy]
+
   def index
     @users = User.all
   end
@@ -48,5 +51,29 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:image, :name, :email, :password,
                                   :password_confirmation)
+    end
+
+    #before_action
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "ログインしていないユーザにはその権限がありません"
+        redirect_to login_url
+      end
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      unless @user == current_user
+        flash[:danger] = "あなたはそのページにアクセスする権限がありません"
+        redirect_to root_url
+      end
+    end
+
+    def admin_user
+      @user = User.find(params[:id])
+      unless @user.admin?
+        flash[:danger] = "そのページは管理者ユーザのみアクセスする権限が与えられています"
+        redirect_to root_url
+      end
     end
 end
