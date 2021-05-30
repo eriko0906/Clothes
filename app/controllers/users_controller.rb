@@ -70,8 +70,7 @@ class UsersController < ApplicationController
     end
 
     def admin_user
-      @user = User.find(params[:id])
-      unless @user.admin?
+      unless current_user.admin?
         flash[:danger] = "そのページは管理者ユーザのみアクセスする権限が与えられています"
         redirect_to root_url
       end
