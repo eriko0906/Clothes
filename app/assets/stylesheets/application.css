@@ -13,3 +13,93 @@
  *= require_tree .
  *= require_self
  */
+
+ /* リセット用CSSココカラ*/
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+ .web{
+  margin: 0;
+  padding: 0;
+  height:100%;
+  width:100%;
+  font-family: 'OCRB',"Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo;
+  cursor: url(/cursor.cur),auto;
+  background-color: #fffcf2;
+  font-size: 15px;
+  color: #003763;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+ /* リセット用CSSココマデ*/
+
+ /*ヘッダ設定ココカラ*/
+
+ ul {
+  list-style:none;
+}
+div {
+  padding: 0 30px;
+}
+.head {
+  display: flex;
+  height:60px;
+  align-items: center;
+  height:120px
+}
+.header_menu {
+  margin-left: auto;
+}
+.head ul {
+  display: flex;
+}
+.head ul li {
+  margin-left: 10px;
+}
+
+.head li{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #fffffd #e8e5db #e8e5db #fffffd;
+  border-radius:10px;
+}
+
+.head li:active{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #e8e5db #fffffd #fffffd #e8e5db;
+  border-radius:10px;
+}
+
+.button{
+  color: #003763;
+}
+ /*ヘッダ設定ココマデ*/
+
+/*フッター設定ココカラ*/
+
+.footer{
+  position: absolute;/*絶対位置*/
+  bottom: 0; /*下に固定*/
+  height: 30px; /*高さ指定*/
+  width: 100%; /*幅指定*/
+}
+div.copy{
+  width: 50px; /*幅指定しないと中央に寄らない（ブロック要素の場が100%以上に見えるから）*/
+  margin: 0 auto;/*autoにすると親要素の1/2になって中央に寄る*/
+  color: #003763;
+}
+
+/*フッター設定ココマデ*/
