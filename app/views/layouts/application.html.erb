@@ -7,37 +7,46 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   </head>
   <body>
-<<<<<<< HEAD
-    <%= yield %>
-    えりぴ
-=======
-    <header>
-      <div class="container">
-        <%= link_to "Clothes", root_path, id: "logo" %>
-        <nav>
-          <ul>
-            <% if logged_in? %>
-              <li><%= link_to "ユーザ一覧",   users_path %></li>
-              <li><%= link_to "ユーザ詳細",   @current_user %></li>
-              <li><%= link_to "ログアウト",   logout_path %></li>
-            <% else %>
-              <li><%= link_to "ログイン",   login_path %></li>
-            <% end %>
-          </ul>
-        </nav>
+    <div class="web">
+      <header>
+        <div class="head">
+          <div class="header_logo">
+            <%= link_to image_tag("/logo.png"), root_path, id: "logo" %>
+          </div>
+          <div class="header_menu">
+            <nav>
+                <ul>
+                <% if logged_in? %>
+                  <li><%= link_to "Users",   users_path , class: "button" %></li>
+                  <li><%= link_to "My page",   @current_user , class: "button" %></li>
+                  <li><%= link_to "Sign Out",   logout_path , class: "button" %></li>
+                <% else %>
+                  <li><%= link_to "Sign In",   login_path , class: "button" %></li>
+                <% end %>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+        <div class="container">
+          <%= yield %>
+        </div>
+        <div class="debug-info">
+          <%= debug(params) if Rails.env.development? %>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
       </div>
-    </header>
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-    <div class="container">
-      <%= yield %>
     </div>
-    <div class="debug-info">
-      <%= debug(params) if Rails.env.development? %>
+    <div class="footer">
+      <div class="copy">Clothes.2021</div>
     </div>
->>>>>>> upstream/master
   </body>
 </html>
