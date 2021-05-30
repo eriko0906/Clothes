@@ -2,17 +2,6 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
-
-      <%= f.label :メールアドレス %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :パスワード %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "ログイン", class: "btn btn-primary" %>
-    <% end %>
-
-    <p>ユーザ登録をまだ行っていませんか? <%= link_to "ユーザ登録する", signup_path %></p>
+    <%= render "shared/login_form" %>
   </div>
 </div>
