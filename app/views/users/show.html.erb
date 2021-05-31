@@ -13,7 +13,7 @@
     <ul>
         <li><%= image_tag cloth.thumbnail, size: "100x100" %></li>
         <li><%= cloth.name %></li>
-        <li><%= link_to "編集",  "#", class: "button" %></li>
+        <li><%= link_to "編集",  edit_cloth_path(cloth), class: "button" %></li>
         <li><%= link_to "削除",  cloth_path(cloth), method: :delete, class: "button" %></li>
     </ul>
 <% end %>

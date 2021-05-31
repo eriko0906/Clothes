@@ -8,5 +8,5 @@
 
     <%= f.select :category_id, [["アウター", 1], ["ボトムス", 2]], include_blank: "選択して下さい" %>
 
-    <%= f.submit "登録する", class: "btn btn-primary" %>
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

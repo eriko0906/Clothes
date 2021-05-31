@@ -11,7 +11,21 @@ class ClothsController < ApplicationController
         else
           render 'static_pages/home'
         end
-      end
+    end
+
+    def edit
+        @cloth = Cloth.find(params[:id])
+    end
+
+    def update
+        @cloth = Cloth.find(params[:id])
+        if @cloth.update(cloth_params)
+            flash[:success] = "アイテム編集完了！"
+            redirect_to @cloth.user
+        else
+            render "edit"
+        end
+    end
 
     def destroy
         Cloth.find(params[:id]).destroy
