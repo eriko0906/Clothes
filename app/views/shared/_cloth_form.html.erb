@@ -1,0 +1,12 @@
+<%= form_with(model: @cloth, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <%= f.label :アイテム画像 %>
+    <%= f.file_field :image, class: 'form-control' %>
+        
+    <%= f.text_area :name, placeholder: "洋服名を入力してください" %>
+
+    <%= f.select :category_id, [["アウター", 1], ["ボトムス", 2]], include_blank: "選択して下さい" %>
+
+    <%= f.submit "登録する", class: "btn btn-primary" %>
+<% end %>
