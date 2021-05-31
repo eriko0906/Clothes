@@ -1,7 +1,7 @@
 <h1>ユーザ一覧</h1>
 <% @users.each do |user| %>
     <ul>
-        <li><%= image_tag user.thumbnail, size: "100x100" %></li>
+        <li><%= link_to image_tag(user.thumbnail, size: "100x100"), user %></li>
         <li><%= user.id %></li>
         <li>ユーザ名：<%= user.name %></li>
         <% if current_user.admin?  %>
