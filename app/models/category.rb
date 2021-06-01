@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-    has_many :cloths
+    has_many :cloths, dependent: :destroy
 end
