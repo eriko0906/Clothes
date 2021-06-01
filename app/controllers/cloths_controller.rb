@@ -9,7 +9,7 @@ class ClothsController < ApplicationController
           flash[:success] = "洋服を登録しました！"
           redirect_to current_user
         else
-          render 'static_pages/home'
+          render new_cloth_path
         end
     end
 
