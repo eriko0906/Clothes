@@ -6,7 +6,7 @@
         
     <%= f.text_area :name, placeholder: "洋服名を入力してください" %>
 
-    <%= f.select :category_id, [["アウター", 1], ["ボトムス", 2]], include_blank: "選択して下さい" %>
-
+    <%= f.collection_select :category_id, Category.all, :id, :category, include_blank: "選択して下さい" %>
+    
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
