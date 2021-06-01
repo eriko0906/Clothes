@@ -1,4 +1,4 @@
-User.create(name: '近藤（管理者）', email: 'kondo8363@gmail.com', password: 'password', password_confirmation: 'password', )
+User.create(name: '近藤（管理者）', email: 'kondo8363@gmail.com', password: 'password', password_confirmation: 'password', admin: 1)
 
 Category.create(category: "トップス")
 Category.create(category: "アウター")
