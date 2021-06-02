@@ -118,9 +118,42 @@ div {
   color: #003763;
   display: block;
 }
-
-
 /*ページ共通設定ココマデ*/
+/*各種ボタン設定ココカラ*/
+.new_button{
+  display: block;
+}
+.button{
+  cursor: hand; cursor:pointer;
+  display: block;
+}
+/*各種ボタン設定ココカラ*/
+/*ページ個別設定ココカラ*/
+/*ログインページ ココカラ*/
+div.login_card{
+  text-align: center;
+}
+
+div.login_card{
+  margin:30px auto 0 auto;
+  width: 500px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #fffffd #e8e5db #e8e5db #fffffd;
+  border-radius:10px;
+  background-color: #fffcf2;
+  color: #003763;
+  margin-bottom: 100px;
+}
+div.login_page{
+  width: 100%;
+}
+.login_main h2{
+  padding: 10px 0 60px 0;
+}
+/*ログインページ ココマデ*/
+
 /*フッター設定ココカラ*/
 
 .footer{
