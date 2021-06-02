@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>ユーザ一覧</h1>
 <% @users.each do |user| %>
     <ul>
@@ -10,3 +11,24 @@
         <% end %>
     </ul>
 <% end %>
+=======
+<div calss="user_index">
+    <div class="ui three column grid">
+        <div class="row">
+            <% @users.each do |user| %>
+                <div class="column">
+                    <ul>
+                        <li><%= image_tag user.thumbnail, size: "100x100" %></li>
+                        <li><%= user.id %></li>
+                        <li>ユーザ名：<%= user.name %></li>
+                        <% if current_user.admin?  %>
+                            <li><%= link_to "編集",  edit_user_path(user), class: "button" %></li>
+                            <li><%= link_to "削除",  user_path(user), method: :delete, class: "button" %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+>>>>>>> 778d72e90d81be2caf03310c6b27e4e384904a4f
