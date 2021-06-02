@@ -127,8 +127,31 @@ div {
   cursor: hand; cursor:pointer;
   display: block;
 }
+
+.signup_button{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #fffffd #e8e5db #e8e5db #fffffd;
+  border-radius:10px;
+  background-color: #fffcf2;
+  color: #003763;
+}
+
+.signup_button:active{
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border:3px solid;
+  border-color: #e8e5db #fffffd #fffffd #e8e5db;
+  border-radius:10px;
+}
 /*各種ボタン設定ココカラ*/
 /*ページ個別設定ココカラ*/
+
 /*ログインページ ココカラ*/
 div.login_card{
   text-align: center;
