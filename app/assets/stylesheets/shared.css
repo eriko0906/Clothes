@@ -8,7 +8,6 @@
   border-radius:10px;
   background-color: #fffcf2;
   color: #003763;
-  font-family: 'OCRB';
 }
 
 .login_button:active{
@@ -19,26 +18,20 @@
   border:3px solid;
   border-color: #e8e5db #fffffd #fffffd #e8e5db;
   border-radius:10px;
-  font-family: 'OCRB';
 }
 
 .form{
   margin-bottom: 30px;
 }
+.button{
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
 
 .login_submit{
   margin-left: 75px;
 }
 
-.login_signnup{
-  margin-top: 50px;
-  margin-bottom: 30px;
-  margin-left: 75px;
-}
-a.new_signnup{
-  width: 140px;
-  height: 39px;
-}
 
 .form-control{
   background-color: #fffcf2;
@@ -49,6 +42,7 @@ a.new_signnup{
 }
 
 .login_signnup{
+  margin-left: 75px;
   color: #fffcf2;
 }
 
@@ -75,4 +69,14 @@ a.new_signnup{
   border:3px solid;
   border-color: #001c33 #0060ad #0060ad #001c33;
   border-radius:10px;
+}
+
+.new_button{
+  color:#fffcf2;
+}
+
+
+.test_button{
+  width:auto;
+  margin-right: 30px;
 }
