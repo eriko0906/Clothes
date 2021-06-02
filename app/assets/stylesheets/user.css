@@ -1,0 +1,9 @@
+.user_index{
+  text-align: center;
+}
+
+.user_index li{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
