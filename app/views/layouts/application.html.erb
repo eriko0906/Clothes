@@ -14,7 +14,11 @@
       <header>
         <div class="header">
           <div class="header_logo">
-            <%= link_to image_tag("/logo.png"), root_path, id: "logo" %>
+            <% if logged_in? %>
+              <%= link_to image_tag("/logo.png"), cloths_path, id: "logo" %>
+            <% else %>
+              <%= link_to image_tag("/logo.png"), login_path, id: "logo" %>
+            <% end %>
           </div>
           <div class="header_menu">
             <nav>
